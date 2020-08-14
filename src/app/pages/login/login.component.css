@@ -69,6 +69,11 @@
   background-color: transparent;
 }
 
+.content-form .input-login input:focus {
+  border-bottom: 2px solid #062b93 !important;
+  transition: all 0.3 ease-in-out;
+}
+
 .content-form .keyboard {
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -76,7 +81,7 @@
   user-select: none;
 }
 
-/* Keyboard for code PIN */
+/* Keyboard for PIN code */
 .content-form .key {
   width: 30px;
   height: 30px;
