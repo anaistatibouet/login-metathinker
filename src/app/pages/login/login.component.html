@@ -1,1 +1,62 @@
-<p>login works!</p>
+<div class="container">
+  <div class="content-text-register" (click)="switch()" [ngClass]="{ op: isRegistered }">
+    <h2>Nouvel utilisateur ?</h2>
+    <p>
+      Inscrivez-vous au plus vite pour profiter de nos dernières bolides
+    </p>
+    <button mat-stroked-button class="action-btn">S'inscrire</button>
+  </div>
+  <div class="content-text-connection" (click)="switch()" [ngClass]="{ op: !isRegistered }">
+    <h2>Déjà utilisateur ?</h2>
+    <p>
+      Venez découvrir nos nouveaux accessoires !
+    </p>
+    <button mat-stroked-button class="action-btn">Se connecter</button>
+  </div>
+  <mat-card class="content-form" [ngClass]="{ move: !isRegistered }">
+    <div class="title">
+      <h1 *ngIf="isRegistered">Connexion</h1>
+      <h1 *ngIf="!isRegistered">Inscription</h1>
+    </div>
+    <div class="input-login">
+      <label for="username">Identifiant</label>
+      <div class="input">
+        <input type="text" maxlength="30" [(ngModel)]="username" />
+        <div class="clear cursor-pointer" (click)="clearUsername()">
+          <span class="material-icons">
+            clear
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="input-login">
+      <label for="pwd">Code PIN</label>
+      <div class="input">
+        <input type="password" maxlength="6" disabled [(ngModel)]="pwd" />
+        <div class="clear cursor-pointer" (click)="clearPwd()">
+          <span class="material-icons">
+            clear
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="keyboard">
+      <div class="flex-center">
+        <button mat-icon-button *ngFor="let key of keys1" class="key" (click)="touch(key)">
+          {{ key }}
+        </button>
+      </div>
+      <div class="flex-center">
+        <button mat-icon-button *ngFor="let key of keys2" class="key" (click)="touch(key)">
+          {{ key }}
+        </button>
+      </div>
+    </div>
+    <div class="auth-validate">
+      <button (click)="login()" class="auth-btn" mat-raised-button>Valider</button>
+    </div>
+    <div class="error" *ngIf="showError">
+      Oups ! Identifiant ou code PIN incorrect
+    </div>
+  </mat-card>
+</div>

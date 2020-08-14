@@ -1,0 +1,204 @@
+:host {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../../assets/img/mustang.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  border-radius: 3px;
+  margin: auto;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+/*_____________ Card Form _____________*/
+.content-form {
+  position: absolute;
+  top: 20vh;
+  color: black;
+  padding: 20px;
+  background-color: white;
+  border-radius: 3px;
+  width: 80vw;
+}
+
+.content-form h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #062b93;
+}
+
+.content-form .input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.content-form .clear {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.content-form label {
+  font-size: 12px;
+}
+
+.content-form .input-login {
+  margin: 10px 0;
+}
+
+.content-form .input-login input {
+  color: black;
+  font-size: 12px;
+  padding: 10px;
+  outline: none;
+  margin: 5px 0;
+  width: 80vw;
+  border: none;
+  border-bottom: 1px solid black !important;
+  background-color: transparent;
+}
+
+.content-form .keyboard {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
+}
+
+/* Keyboard for code PIN */
+.content-form .key {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: #383838;
+  margin: 5px 0;
+  box-shadow: 0px 5px 3px lightgrey;
+}
+
+.auth-validate {
+  display: flex;
+  justify-content: center;
+}
+
+.content-form .auth-btn {
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0 20px;
+  border-radius: 2px;
+  background-color: #2d2e32;
+  color: white;
+  text-transform: uppercase;
+}
+
+/*_____________ Content Text _____________*/
+.content-text-register h2,
+.content-text-connection h2 {
+  margin-right: 10px;
+}
+
+.content-text-register,
+.content-text-connection {
+  display: flex;
+  align-items: baseline;
+  position: absolute;
+  top: 10px;
+  padding: 30px;
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.action-btn {
+  color: white;
+  border-color: white !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.action-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.op {
+  opacity: 1;
+}
+
+.content-text-connection p,
+.content-text-register p {
+  display: none;
+}
+
+/*__________________________________ Rules for Desktop version */
+@media screen and (min-width: 1024px) {
+  .container {
+    height: 50vh;
+    width: 45vw;
+    left: -11vw !important;
+  }
+
+  /*_____________ Card Form _____________*/
+  .content-form {
+    position: absolute;
+    top: -3vh;
+    left: 0;
+    padding: 20px;
+    height: 50vh;
+    width: 20vw;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    margin-left: 0;
+    transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
+  }
+
+  /* Moving form card  */
+  .move {
+    margin-left: 30vw;
+    transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
+  }
+
+  .content-form .input-login input {
+    width: 20vw;
+  }
+
+  /*_____________ Content Text _____________*/
+  .content-text-register {
+    position: absolute;
+    right: 20px;
+  }
+
+  .content-text-connection {
+    position: absolute;
+    left: 20px;
+  }
+
+  .content-text-connection,
+  .content-text-register {
+    display: inherit;
+    align-items: inherit;
+    display: block;
+  }
+
+  .move {
+    margin-left: 25vw;
+  }
+}
