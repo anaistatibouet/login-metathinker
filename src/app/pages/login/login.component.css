@@ -8,6 +8,10 @@
   background-position: center;
 }
 
+h3 {
+  display: none;
+}
+
 .container {
   position: relative;
   background-color: black;
@@ -81,11 +85,11 @@
 
 /* Keyboard for PIN code */
 .content-form .key {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
   text-align: center;
-  line-height: 30px;
+  line-height: 34px;
   color: white;
   font-size: 12px;
   cursor: pointer;
@@ -161,9 +165,20 @@
 
 /*__________________________________ Rules for Desktop version */
 @media screen and (min-width: 1024px) {
+  h3 {
+    position: absolute;
+    top: 3vh;
+    right: 3vw;
+    display: block;
+    font-family: 'Recursive', sans-serif;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+  }
+
   .container {
     height: 60vh;
-    width: 60vw;
+    width: 50vw;
     left: -14vw !important;
   }
 
@@ -184,7 +199,7 @@
 
   /* Moving form card  */
   .move {
-    margin-right: 35vw;
+    margin-right: 23vw;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
   }
 
