@@ -15,37 +15,40 @@
     <button mat-stroked-button class="action-btn">Se connecter</button>
     <img src="../../../assets/img/wheel.svg" alt="Wheel" />
   </div>
+
   <mat-card class="content-form" [ngClass]="{ move: !isRegistered }">
     <div class="title">
       <h1 *ngIf="isRegistered">Connexion</h1>
       <h1 *ngIf="!isRegistered">Inscription</h1>
     </div>
-    <div class="input-login">
-      <label for="username">Identifiant</label>
-      <div class="input">
-        <input type="text" maxlength="30" [(ngModel)]="username" placeholder="Entrez votre identifiant Ford" />
-        <div class="clear cursor-pointer" (click)="clearUsername()">
-          <span class="material-icons">
-            clear
-          </span>
-        </div>
+    <div class="input">
+      <mat-form-field class="input-login">
+        <mat-label>Identifiant</mat-label>
+        <input matInput maxlength="30" [(ngModel)]="username" placeholder="Entrez votre identifiant Ford" type="text" />
+      </mat-form-field>
+      <div class="clear cursor-pointer" (click)="clearUsername()">
+        <span class="material-icons">
+          clear
+        </span>
       </div>
     </div>
-    <div class="input-login">
-      <label for="pwd">Code PIN</label>
-      <div class="input">
+    <div class="input">
+      <mat-form-field class="input-login">
+        <mat-label>Code PIN</mat-label>
         <input
+          matInput
           type="password"
           maxlength="6"
-          disabled
           placeholder="Tapez votre code sur le pavé numérique"
           [(ngModel)]="pwd"
+          disabled
+          id="input-pwd"
         />
-        <div class="clear cursor-pointer" (click)="clearPwd()">
-          <span class="material-icons">
-            clear
-          </span>
-        </div>
+      </mat-form-field>
+      <div class="clear cursor-pointer" (click)="clearUsername()">
+        <span class="material-icons">
+          clear
+        </span>
       </div>
     </div>
     <div class="keyboard">
