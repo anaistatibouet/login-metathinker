@@ -18,10 +18,13 @@
   </div>
 
   <mat-card class="content-form" [ngClass]="{ move: !isRegistered }">
-    <div class="title">
-      <h1 *ngIf="isRegistered">Connexion</h1>
-      <h1 *ngIf="!isRegistered">Inscription</h1>
+    <div class="title" *ngIf="isRegistered; else isNotRegistered">
+      <h1>Connexion</h1>
     </div>
+    <ng-template #isNotRegistered>
+      <h1>Inscription</h1>
+    </ng-template>
+
     <div class="input">
       <mat-form-field class="input-login">
         <mat-label>Identifiant</mat-label>
