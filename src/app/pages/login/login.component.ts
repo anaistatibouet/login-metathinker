@@ -43,10 +43,10 @@ export class LoginComponent implements OnInit {
   // Reset all form fields
   public clearPwd() {
     this.pwd = '';
+    this.showError = false;
   }
   public clearUsername() {
     this.username = '';
-    this.pwd = '';
     this.showError = false;
   }
 
