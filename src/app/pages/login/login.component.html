@@ -4,7 +4,8 @@
     <p>
       Inscrivez-vous au plus vite pour profiter de nos dernières bolides
     </p>
-    <button mat-stroked-button class="action-btn">S'inscrire</button>
+    <button mat-stroked-button class="action-btn register-btn">S'inscrire</button>
+    <img src="../../../assets/img/car.svg" alt="sport car" class="car" />
   </div>
   <div class="content-text-connection" (click)="switch()" [ngClass]="{ op: !isRegistered }">
     <h2>Déjà utilisateur ?</h2>
@@ -12,6 +13,7 @@
       Venez découvrir nos nouveaux accessoires !
     </p>
     <button mat-stroked-button class="action-btn">Se connecter</button>
+    <img src="../../../assets/img/wheel.svg" alt="Wheel" />
   </div>
   <mat-card class="content-form" [ngClass]="{ move: !isRegistered }">
     <div class="title">
@@ -21,7 +23,7 @@
     <div class="input-login">
       <label for="username">Identifiant</label>
       <div class="input">
-        <input type="text" maxlength="30" [(ngModel)]="username" />
+        <input type="text" maxlength="30" [(ngModel)]="username" placeholder="Entrez votre identifiant Ford" />
         <div class="clear cursor-pointer" (click)="clearUsername()">
           <span class="material-icons">
             clear
@@ -32,7 +34,13 @@
     <div class="input-login">
       <label for="pwd">Code PIN</label>
       <div class="input">
-        <input type="password" maxlength="6" disabled [(ngModel)]="pwd" />
+        <input
+          type="password"
+          maxlength="6"
+          disabled
+          placeholder="Tapez votre code sur le pavé numérique"
+          [(ngModel)]="pwd"
+        />
         <div class="clear cursor-pointer" (click)="clearPwd()">
           <span class="material-icons">
             clear

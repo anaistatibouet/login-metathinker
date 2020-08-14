@@ -59,7 +59,7 @@
 
 .content-form .input-login input {
   color: black;
-  font-size: 12px;
+  font-size: 11px;
   padding: 10px;
   outline: none;
   margin: 5px 0;
@@ -92,6 +92,10 @@
   box-shadow: 0px 5px 3px lightgrey;
 }
 
+.content-form .key:hover {
+  background-color: #062b93;
+}
+
 .auth-validate {
   display: flex;
   justify-content: center;
@@ -110,10 +114,6 @@
 }
 
 /*_____________ Content Text _____________*/
-.content-text-register h2,
-.content-text-connection h2 {
-  margin-right: 10px;
-}
 
 .content-text-register,
 .content-text-connection {
@@ -125,6 +125,18 @@
   color: white;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+}
+
+.content-text-register h2,
+.content-text-connection h2 {
+  margin-right: 10px;
+}
+
+.content-text-connection p,
+.content-text-register p,
+.content-text-connection img,
+.content-text-register img {
+  display: none;
 }
 
 .action-btn {
@@ -140,11 +152,6 @@
 
 .op {
   opacity: 1;
-}
-
-.content-text-connection p,
-.content-text-register p {
-  display: none;
 }
 
 /*__________________________________ Rules for Desktop version */
@@ -172,7 +179,7 @@
 
   /* Moving form card  */
   .move {
-    margin-left: 30vw;
+    margin-left: 23vw;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
   }
 
@@ -182,13 +189,14 @@
 
   /*_____________ Content Text _____________*/
   .content-text-register {
+    text-align: right;
     position: absolute;
-    right: 20px;
+    right: 10px;
   }
 
   .content-text-connection {
     position: absolute;
-    left: 20px;
+    left: 10px;
   }
 
   .content-text-connection,
@@ -196,9 +204,37 @@
     display: inherit;
     align-items: inherit;
     display: block;
+    width: 15vw;
   }
 
-  .move {
-    margin-left: 25vw;
+  .content-text-register h2,
+  .content-text-connection h2 {
+    margin-right: 0;
+  }
+
+  .content-text-register p,
+  .content-text-connection p {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .content-text-connection img,
+  .content-text-register img {
+    display: block;
+    width: 80px;
+    margin-top: 20px;
+    opacity: 0.8;
+  }
+
+  .content-text-register .car {
+    position: absolute;
+    top: 25vh;
+    right: 3vw;
+    width: 10vw;
+  }
+
+  .register-btn {
+    position: absolute;
+    right: 2vw;
   }
 }
