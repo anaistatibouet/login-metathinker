@@ -57,21 +57,19 @@
   margin: 10px 0;
 }
 
-.content-form .input-login input {
+.content-form .input .input-login {
   color: black;
-  font-size: 11px;
-  padding: 10px;
+  font-size: 14px !important;
   outline: none;
   margin: 5px 0;
   width: 80vw;
-  border: none;
-  border-bottom: 1px solid black !important;
-  background-color: transparent;
 }
 
-.content-form .input-login input:focus {
-  border-bottom: 2px solid #062b93 !important;
-  transition: all 0.3 ease-in-out;
+#input-pwd {
+  position: relative;
+  top: 6px;
+  border-bottom: 1px solid #5e6679;
+  opacity: 1 !important;
 }
 
 .content-form .keyboard {
@@ -188,10 +186,6 @@
   .move {
     margin-right: 35vw;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
-  }
-
-  .content-form .input-login input {
-    width: 20vw;
   }
 
   .content-form .key:hover,
