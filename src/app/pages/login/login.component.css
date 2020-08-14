@@ -92,10 +92,6 @@
   box-shadow: 0px 5px 3px lightgrey;
 }
 
-.content-form .key:hover {
-  background-color: #062b93;
-}
-
 .auth-validate {
   display: flex;
   justify-content: center;
@@ -147,7 +143,7 @@
 
 .action-btn:hover {
   color: black;
-  background-color: white;
+  background-color: white !important;
 }
 
 .op {
@@ -185,6 +181,12 @@
 
   .content-form .input-login input {
     width: 20vw;
+  }
+
+  .content-form .key:hover,
+  .auth-validate .auth-btn:hover {
+    background-color: #062b93;
+    transition: all 0.5s ease-in-out;
   }
 
   /*_____________ Content Text _____________*/
