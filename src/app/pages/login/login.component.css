@@ -130,7 +130,7 @@
 
 .content-text-register h2,
 .content-text-connection h2 {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 10px;
   text-transform: uppercase;
 }
@@ -157,12 +157,16 @@
   opacity: 1;
 }
 
+.error {
+  color: red;
+}
+
 /*__________________________________ Rules for Desktop version */
 @media screen and (min-width: 1024px) {
   .container {
-    height: 50vh;
-    width: 45vw;
-    left: -11vw !important;
+    height: 60vh;
+    width: 60vw;
+    left: -14vw !important;
   }
 
   /*_____________ Card Form _____________*/
@@ -171,8 +175,8 @@
     top: -3vh;
     right: 0;
     padding: 20px;
-    height: 50vh;
-    width: 20vw;
+    height: 60vh;
+    width: 25vw;
     background-color: white;
     color: black;
     border-radius: 3px;
@@ -182,7 +186,7 @@
 
   /* Moving form card  */
   .move {
-    margin-right: 23vw;
+    margin-right: 35vw;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
   }
 
@@ -231,7 +235,7 @@
   .content-text-register img {
     display: block;
     width: 80px;
-    margin-top: 20px;
+    margin-top: 12vh;
     opacity: 0.8;
   }
 

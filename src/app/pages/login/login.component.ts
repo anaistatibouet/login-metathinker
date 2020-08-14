@@ -27,7 +27,9 @@ export class LoginComponent implements OnInit {
   }
 
   public login(): void {
-    console.log('Hello, welcome user');
+    if (!this.username || !this.pwd) {
+      this.showError = true;
+    }
   }
 
   // Password with virtualkeyboard

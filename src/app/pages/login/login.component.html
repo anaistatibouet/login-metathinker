@@ -63,8 +63,8 @@
     <div class="auth-validate">
       <button (click)="login()" class="auth-btn" mat-raised-button>Valider</button>
     </div>
-    <div class="error" *ngIf="showError">
-      Oups ! Identifiant ou code PIN incorrect
+    <div *ngIf="showError">
+      <p class="error">Veuillez remplir les champs identifiant et code PIN.</p>
     </div>
   </mat-card>
 </div>
