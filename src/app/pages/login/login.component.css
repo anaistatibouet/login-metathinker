@@ -125,7 +125,9 @@
 
 .content-text-register h2,
 .content-text-connection h2 {
+  font-size: 16px;
   margin-right: 10px;
+  text-transform: uppercase;
 }
 
 .content-text-connection p,
@@ -162,7 +164,7 @@
   .content-form {
     position: absolute;
     top: -3vh;
-    left: 0;
+    right: 0;
     padding: 20px;
     height: 50vh;
     width: 20vw;
@@ -175,7 +177,7 @@
 
   /* Moving form card  */
   .move {
-    margin-left: 23vw;
+    margin-right: 23vw;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
   }
 
@@ -193,12 +195,12 @@
   .content-text-register {
     text-align: right;
     position: absolute;
-    right: 10px;
+    left: 10px;
   }
 
   .content-text-connection {
     position: absolute;
-    left: 10px;
+    right: 10px;
   }
 
   .content-text-connection,
