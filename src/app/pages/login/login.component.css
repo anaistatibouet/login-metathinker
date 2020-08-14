@@ -8,6 +8,10 @@
   background-position: center;
 }
 
+h3 {
+  display: none;
+}
+
 .container {
   position: relative;
   background-color: black;
@@ -168,7 +172,7 @@
     display: block;
     font-family: 'Recursive', sans-serif;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     margin: 10px;
   }
 
@@ -209,12 +213,12 @@
   .content-text-register {
     text-align: right;
     position: absolute;
-    left: 3vw;
+    left: 10px;
   }
 
   .content-text-connection {
     position: absolute;
-    right: 3vw;
+    right: 10px;
   }
 
   .content-text-connection,
