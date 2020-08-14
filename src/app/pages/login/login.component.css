@@ -69,6 +69,11 @@
   background-color: transparent;
 }
 
+.content-form .input-login input:focus {
+  border-bottom: 2px solid #062b93 !important;
+  transition: all 0.3 ease-in-out;
+}
+
 .content-form .keyboard {
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -76,7 +81,7 @@
   user-select: none;
 }
 
-/* Keyboard for code PIN */
+/* Keyboard for PIN code */
 .content-form .key {
   width: 30px;
   height: 30px;
@@ -125,7 +130,9 @@
 
 .content-text-register h2,
 .content-text-connection h2 {
+  font-size: 14px;
   margin-right: 10px;
+  text-transform: uppercase;
 }
 
 .content-text-connection p,
@@ -150,22 +157,26 @@
   opacity: 1;
 }
 
+.error {
+  color: red;
+}
+
 /*__________________________________ Rules for Desktop version */
 @media screen and (min-width: 1024px) {
   .container {
-    height: 50vh;
-    width: 45vw;
-    left: -11vw !important;
+    height: 60vh;
+    width: 60vw;
+    left: -14vw !important;
   }
 
   /*_____________ Card Form _____________*/
   .content-form {
     position: absolute;
     top: -3vh;
-    left: 0;
+    right: 0;
     padding: 20px;
-    height: 50vh;
-    width: 20vw;
+    height: 60vh;
+    width: 25vw;
     background-color: white;
     color: black;
     border-radius: 3px;
@@ -175,7 +186,7 @@
 
   /* Moving form card  */
   .move {
-    margin-left: 23vw;
+    margin-right: 35vw;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
   }
 
@@ -193,12 +204,12 @@
   .content-text-register {
     text-align: right;
     position: absolute;
-    right: 10px;
+    left: 10px;
   }
 
   .content-text-connection {
     position: absolute;
-    left: 10px;
+    right: 10px;
   }
 
   .content-text-connection,
@@ -224,7 +235,7 @@
   .content-text-register img {
     display: block;
     width: 80px;
-    margin-top: 20px;
+    margin-top: 12vh;
     opacity: 0.8;
   }
 
