@@ -43,12 +43,12 @@
     </div>
   </div>
   <div class="keyboard">
-    <div class="flex-center">
+    <div class="flex-between">
       <button mat-icon-button *ngFor="let key of keys1" class="key" (click)="touch(key)">
         {{ key }}
       </button>
     </div>
-    <div class="flex-center">
+    <div class="flex-between">
       <button mat-icon-button *ngFor="let key of keys2" class="key" (click)="touch(key)">
         {{ key }}
       </button>

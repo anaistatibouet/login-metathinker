@@ -16,9 +16,9 @@ body {
   pointer-events: none;
 }
 
-.flex-center {
+.flex-between {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .cursor-pointer {
