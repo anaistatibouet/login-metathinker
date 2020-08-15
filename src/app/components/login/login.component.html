@@ -1,0 +1,26 @@
+<h3>Testez la puissance de la Mustang Shelby.</h3>
+<div class="container">
+  <div class="content-text-register" (click)="switch()" [ngClass]="{ op: isRegistered }">
+    <h2>Nouvel utilisateur ?</h2>
+    <p>
+      Inscrivez-vous au plus vite pour profiter de nos derniers bolides
+    </p>
+    <button mat-stroked-button class="action-btn register-btn">S'inscrire</button>
+    <img src="../../../assets/img/car.svg" alt="sport car" class="car" />
+  </div>
+  <div class="content-text-connection" (click)="switch()" [ngClass]="{ op: !isRegistered }">
+    <h2>Déjà utilisateur ?</h2>
+    <p>
+      Venez découvrir nos nouveaux accessoires !
+    </p>
+    <button mat-stroked-button class="action-btn">Se connecter</button>
+    <img src="../../../assets/img/wheel.svg" alt="Wheel" />
+  </div>
+
+  <mat-card class="content-form" [ngClass]="{ move: !isRegistered }">
+    <app-connection *ngIf="isRegistered; else isNotRegistered"></app-connection>
+    <ng-template #isNotRegistered>
+      <app-registration></app-registration>
+    </ng-template>
+  </mat-card>
+</div>

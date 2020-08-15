@@ -42,70 +42,6 @@ h3 {
   width: 80vw;
 }
 
-.content-form h1 {
-  text-transform: uppercase;
-  text-align: center;
-  color: #062b93;
-}
-
-.content-form .input {
-  display: flex;
-  margin-bottom: 15px;
-}
-
-.content-form .clear {
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-  padding: 0 10px;
-}
-
-.content-form label {
-  font-size: 12px;
-}
-
-.content-form .input-login {
-  margin: 10px 0;
-}
-
-.content-form .input .input-login {
-  color: black;
-  font-size: 14px !important;
-  outline: none;
-  margin: 5px 0;
-  width: 80vw;
-}
-
-#input-pwd {
-  position: relative;
-  top: 6px;
-  border-bottom: 1px solid #5e6679;
-  opacity: 1 !important;
-}
-
-.content-form .keyboard {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none;
-}
-
-/* Keyboard for PIN code */
-.content-form .key {
-  width: 34px;
-  height: 34px;
-  border-radius: 17px;
-  text-align: center;
-  line-height: 34px;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
-  margin-top: 5px;
-  background-color: #383838;
-  margin: 5px 0;
-  box-shadow: 0px 5px 3px lightgrey;
-}
-
 .auth-validate {
   display: flex;
   justify-content: center;
@@ -166,10 +102,6 @@ h3 {
   opacity: 1;
 }
 
-.error {
-  color: red;
-}
-
 /*_________________Rules for Desktop version_________________  */
 @media screen and (min-width: 1024px) {
   h3 {
@@ -189,10 +121,10 @@ h3 {
   /*_____________ Card Form _____________*/
   .content-form {
     position: absolute;
-    top: -3vh;
+    top: -8vh;
+    padding: 3vh 3vh 0;
     right: 0;
-    padding: 8vh 3vh 0;
-    height: 58vh;
+    height: 70vh;
     width: 25vw;
     background-color: white;
     color: black;
@@ -205,12 +137,6 @@ h3 {
   .move {
     margin-right: 23vw;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
-  }
-
-  .content-form .key:hover,
-  .auth-validate .auth-btn:hover {
-    background-color: #062b93;
-    transition: all 0.5s ease-in-out;
   }
 
   /*_____________ Content Text _____________*/
