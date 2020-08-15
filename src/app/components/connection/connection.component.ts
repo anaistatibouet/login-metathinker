@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { shuffle } from 'src/app/utils/app.utils';
 
 @Component({
   selector: 'app-connection',
@@ -47,12 +48,4 @@ export class ConnectionComponent implements OnInit {
     this.userMail = '';
     this.showError = false;
   }
-}
-
-function shuffle(a: Array<any>) {
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return [a.slice(0, 5), a.slice(5, 10)];
 }

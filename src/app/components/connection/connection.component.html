@@ -5,7 +5,7 @@
   <div class="input">
     <mat-form-field class="input-login">
       <mat-label>Email</mat-label>
-      <input matInput [(ngModel)]="userMail" type="email" required />
+      <input matInput [(ngModel)]="userMail" type="email" required email />
     </mat-form-field>
     <div class="clear cursor-pointer" (click)="clearUserMail()">
       <span class="material-icons">
@@ -58,6 +58,6 @@
     <button (click)="login()" class="auth-btn" mat-raised-button>Valider</button>
   </div>
   <div *ngIf="showError">
-    <p class="error">Veuillez remplir les champs identifiant et code PIN.</p>
+    <p class="error">Veuillez remplir les champs Email et Code PIN.</p>
   </div>
 </div>

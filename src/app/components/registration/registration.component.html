@@ -1,8 +1,8 @@
 <div>
   <h1>Inscription</h1>
-  <mat-vertical-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+  <mat-vertical-stepper [linear]="!isLinear" #stepper>
+    <mat-step [stepControl]="identityGroup">
+      <form [formGroup]="identityGroup">
         <ng-template matStepLabel>Identité</ng-template>
         <mat-form-field class="input-information">
           <mat-label>Prénom</mat-label>
@@ -17,33 +17,44 @@
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
+    <mat-step [stepControl]="emailGroup">
+      <form [formGroup]="emailGroup">
         <ng-template matStepLabel>Email</ng-template>
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input matInput formControlName="userMail" type="email" required />
+          <input matInput formControlName="userMail" type="email" required email />
         </mat-form-field>
+        <p *ngIf="errorMail">Email incorrect</p>
         <div>
           <button mat-button matStepperPrevious>Précédent</button>
-          <button mat-button matStepperNext>Suivant</button>
+          <button mat-button matStepperNext (click)="validateEmail()">Suivant</button>
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-      <form [formGroup]="thirdFormGroup">
+    <mat-step [stepControl]="pwdGroup">
+      <form [formGroup]="pwdGroup">
         <ng-template matStepLabel>Code PIN</ng-template>
         <mat-form-field>
           <mat-label>Code PIN</mat-label>
           <input
             matInput
             formControlName="password"
-            type="password"
+            [type]="hide ? 'password' : 'text'"
             required
             placeholder="Entrez 8 chiffres"
             minlength="8"
             maxlength="8"
+            (keypress)="keyPress($event)"
           />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon class="hide-btn">{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
         </mat-form-field>
         <div>
           <button mat-button matStepperPrevious>Précédent</button>
