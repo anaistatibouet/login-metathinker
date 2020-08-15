@@ -1,4 +1,4 @@
-/*_________________Rules for Mobile version_________________  */
+/*_________________Mobile version_________________  */
 .connection h1 {
   text-transform: uppercase;
   text-align: center;
@@ -98,7 +98,14 @@
   color: red;
 }
 
-/*_________________Rules for Desktop version_________________  */
+/*_________________Tablet Version_________________ */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .connection .keyboard {
+    margin: 7vh 0;
+  }
+}
+
+/*_________________Desktop version_________________  */
 @media screen and (min-width: 1024px) {
   .connection h1 {
     margin-bottom: 50px;
