@@ -8,7 +8,7 @@ import { validateNumber } from 'src/app/utils/app.utils';
   styleUrls: ['./registration.component.css'],
 })
 export class RegistrationComponent implements OnInit {
-  public isLinear = false;
+  public isLinear: boolean = false;
   public identityGroup: FormGroup;
   public emailGroup: FormGroup;
   public pwdGroup: FormGroup;
@@ -34,6 +34,7 @@ export class RegistrationComponent implements OnInit {
     return validateNumber(event);
   }
 
+  // Control the validation of email
   public validateEmail(): boolean {
     if (!this.emailGroup.get('userMail').valid) {
       this.errorMail = true;

@@ -32,7 +32,7 @@ export class ConnectionComponent implements OnInit {
   }
 
   // Password with virtualkeyboard
-  public touch($event) {
+  public touch($event): void {
     this.showError = false;
     if (this.pwd.length < 6) {
       this.pwd += $event;
@@ -40,11 +40,11 @@ export class ConnectionComponent implements OnInit {
   }
 
   // Reset all form fields
-  public clearPwd() {
+  public clearPwd(): void {
     this.pwd = '';
     this.showError = false;
   }
-  public clearUserMail() {
+  public clearUserMail(): void {
     this.userMail = '';
     this.showError = false;
   }
