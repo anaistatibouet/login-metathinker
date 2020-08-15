@@ -1,8 +1,10 @@
+/*_________________Rules for Mobile version_________________  */
 .connection h1 {
   text-transform: uppercase;
   text-align: center;
   color: #062b93;
   margin: 0;
+  margin-bottom: 5vh;
 }
 
 .connection .input {
@@ -57,6 +59,7 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none;
+  margin: 2vh 0;
 }
 .connection .key {
   width: 34px;
