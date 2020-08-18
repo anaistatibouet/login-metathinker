@@ -114,6 +114,7 @@ h3 {
   .content-form {
     padding: 60px;
     height: 50vh;
+    overflow-y: inherit;
   }
 
   .content-text-register,
@@ -151,6 +152,7 @@ h3 {
     border-radius: 3px;
     margin-left: 0;
     transition: all 0.5s cubic-bezier(0.83, 1.95, 0.71, 0.65);
+    overflow-y: inherit;
   }
 
   /* Moving form card  */
